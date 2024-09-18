@@ -19,7 +19,7 @@ public class Function {
     @FunctionName("timeScheduledRunner")
     public void run(
             @TimerTrigger(name = "timeScheduledRunnerTrigger",
-                    schedule = "0 */5 * * * *") String timerInfo,
+                    schedule = "0 */1 * * * *") String timerInfo,
             final ExecutionContext context) {
         context.getLogger().info("Timer is triggered: " + timerInfo);
         context.getLogger().info("Triggered at: " + LocalDateTime.now());
