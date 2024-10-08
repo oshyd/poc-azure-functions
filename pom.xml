@@ -14,7 +14,7 @@
         <java.version>17</java.version>
         <azure.functions.maven.plugin.version>1.24.0</azure.functions.maven.plugin.version>
 	<azure.functions.java.library.version>3.0.0</azure.functions.java.library.version>
-        <functionAppName>oshyd-poc-function-app</functionAppName>
+        <functionAppName>oshyd-poc-functions-app</functionAppName>
     </properties>
 
     <dependencies>
