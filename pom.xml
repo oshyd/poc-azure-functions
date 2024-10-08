@@ -64,17 +64,17 @@
                 <version>${azure.functions.maven.plugin.version}</version>
                 <configuration>
                     <!-- function app name -->
-	            <appName>${functionAppName}</appName>
+	                <appName>${functionAppName}</appName>
                     <!-- function app resource group -->
-                    <resourceGroup>oshyd-poc-rg</resourceGroup>
+                    <resourceGroup>oshyd-poc-functions-rg</resourceGroup>
                     <!-- function app service plan name -->
-                    <appServicePlanName>oshyd-poc-function-plan</appServicePlanName> 
+                    <appServicePlanName>ASP-oshydpocfunctionsrg-b7e8</appServicePlanName> 
                     <!-- function app region-->
                     <!-- refers https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Functions:-Configuration-Details#supported-regions for all valid values -->
                     <region>uksouth</region>
                     <!-- function pricingTier, default to be consumption if not specified -->
                     <!-- refers https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Functions:-Configuration-Details#supported-pricing-tiers for all valid values -->
-                    <pricingTier>consumption</pricingTier>
+                    <pricingTier>premium</pricingTier>
 
                     <!-- Whether to disable application insights, default is false -->
                     <!-- refers https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Functions:-Configuration-Details for all valid configurations for application insights-->
