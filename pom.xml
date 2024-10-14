@@ -68,7 +68,7 @@
                     <!-- function app resource group -->
                     <resourceGroup>oshyd-poc-functions-rg</resourceGroup>
                     <!-- function app service plan name -->
-                    <appServicePlanName>ASP-oshydpocfunctionsrg-b7e8</appServicePlanName> 
+                    <appServicePlanName>ASP-oshydpocfunctionsrg-a2a5</appServicePlanName> 
                     <!-- function app region-->
                     <!-- refers https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Functions:-Configuration-Details#supported-regions for all valid values -->
                     <region>uksouth</region>
