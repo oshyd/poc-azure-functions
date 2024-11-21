@@ -23,9 +23,11 @@ public class Function {
             final ExecutionContext context) {
         context.getLogger().info("Timer is triggered: " + timerInfo);
         context.getLogger().info("Triggered at: " + LocalDateTime.now());
+        String envVarValue = System.getenv("TEST_ENV_VAR");
 
 
         context.getLogger().info("Work finished");
+        context.getLogger().info("TEST_ENV_VAR=" + envVarValue);
     }
 
 /*
