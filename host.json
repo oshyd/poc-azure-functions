@@ -1,14 +1,5 @@
 {
   "version": "2.0",
-  "logging": {
-      "applicationInsights": {
-          "samplingSettings": {
-              "isEnabled": true,
-              "excludedTypes": "Request"
-          },
-          "enableLiveMetricsFilters": true
-      }
-  },
   "telemetryMode": "openTelemetry",
   "extensionBundle": {
     "id": "Microsoft.Azure.Functions.ExtensionBundle",
