@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write #This is required for requesting the JWT
+      contents: read
 
     steps:
       - name: 'Checkout GitHub Action'
@@ -26,7 +27,7 @@ jobs:
 
       - name: Setup Java Sdk ${{ env.JAVA_VERSION }}
         uses: actions/setup-java@v1
-        with: |+
+        with:
           java-version: ${{ env.JAVA_VERSION }}
 
       - name: 'Restore Project Dependencies Using Mvn'
