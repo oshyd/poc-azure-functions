@@ -21,13 +21,7 @@ public class Function {
             @TimerTrigger(name = "timeScheduledRunnerTrigger",
                     schedule = "0 */1 * * * *") String timerInfo,
             final ExecutionContext context) {
-        context.getLogger().info("Timer is triggered: " + timerInfo);
-        context.getLogger().info("Triggered at: " + LocalDateTime.now());
-        String envVarValue = System.getenv("TEST_ENV_VAR");
 
-
-        context.getLogger().info("Work finished");
-        context.getLogger().info("TEST_ENV_VAR=" + envVarValue);
         context.getLogger().info("2024-12-05 22:46:47.664 Starting process for application A");
         context.getLogger().info("Error: Unable to connect to database");
         context.getLogger().info("Retrying in 5 seconds...");
