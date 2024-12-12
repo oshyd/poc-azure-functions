@@ -28,6 +28,11 @@ public class Function {
 
         context.getLogger().info("Work finished");
         context.getLogger().info("TEST_ENV_VAR=" + envVarValue);
+        context.getLogger().info("2024-12-05 22:46:47.664 Starting process for application A");
+        context.getLogger().info("Error: Unable to connect to database");
+        context.getLogger().info("Retrying in 5 seconds...");
+        context.getLogger().info("2024-12-05 22:47:10.123 Process for application B started successfully");
+
     }
 
 /*
