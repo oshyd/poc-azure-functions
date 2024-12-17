@@ -32,7 +32,7 @@ jobs:
 
       - name: 'Restore Project Dependencies Using Mvn'
         shell: pwsh
-        run: |+
+        run: |
           pushd './${{ env.PACKAGE_DIRECTORY }}'
           mvn clean package
           popd
@@ -40,9 +40,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2147CCF2745E4DFF945AEF05A404E9A0 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_778E0E2F8E444592AF1F76ADF1F6CC3A }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_099E57B740254980A6F1F38210568EA2 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6451217BA6D24482878A75FBFEB059D1 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_97144357F377403BAF1D29B400D8023B }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1846458143684BB38E3E2A7D7C1816FC }}
 
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
