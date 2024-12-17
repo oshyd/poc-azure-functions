@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Java project to Azure Function App - funcapp-elastic-java-uks
+name: Build and deploy Java project to Azure Function App - oshyd-flex-func-app
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_NAME: funcapp-elastic-java-uks # set this to your function app name on Azure
+  AZURE_FUNCTIONAPP_NAME: oshyd-flex-func-app # set this to your function app name on Azure
   PACKAGE_DIRECTORY: '.' # set this to the directory which contains pom.xml file
   JAVA_VERSION: '17' # set this to the java version to use
 
@@ -19,14 +19,14 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write #This is required for requesting the JWT
-
+      contents: read
     steps:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v4
 
       - name: Setup Java Sdk ${{ env.JAVA_VERSION }}
         uses: actions/setup-java@v1
-        with: |+
+        with:
           java-version: ${{ env.JAVA_VERSION }}
 
       - name: 'Restore Project Dependencies Using Mvn'
@@ -39,16 +39,16 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_EDA3BD1EF26B4B4D82EB4FCA4CCC1014 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_697C7675B86244059F767FC618C0D7D4 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C79F44B4BF084F3695D31E748922AD91 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F5B4BBA56F734913B90A9C6C47C079D4 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FDD4037628394C22963073D542749B26 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7E8CB4B8E6604B39A5DE1F85DAA995F8 }}
 
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         id: fa
         with:
-          app-name: 'funcapp-elastic-java-uks'
-          slot-name: 'dev'
+          app-name: 'oshyd-flex-func-app'
+          slot-name: 'Production'
           package: '${{ env.PACKAGE_DIRECTORY }}'
           respect-pom-xml: true
           
