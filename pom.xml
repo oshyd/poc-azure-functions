@@ -17,6 +17,7 @@
         <azure.functions.maven.plugin.version>1.24.0</azure.functions.maven.plugin.version>
 	<azure.functions.java.library.version>3.0.0</azure.functions.java.library.version>
         <functionAppName>funcapp-elastic-java-uks</functionAppName>
+        <functionAppName1>funcapp-elastic-java-uks</functionAppName1>
     </properties>
 
     <dependencies>
